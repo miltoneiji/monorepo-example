@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo-example/components",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "jest": "^23.6.0",
+    "react-testing-library": "^5.4.4",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  }
+}
