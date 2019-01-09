@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-example/components",
+  "name": "@monorepo/components",
   "version": "1.0.0",
   "main": "lib/index.js",
   "dependencies": {

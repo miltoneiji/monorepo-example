@@ -1,8 +1,8 @@
 {
-  "name": "@monorepo-example/core",
+  "name": "@monorepo/core",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "jest": "^23.6.0",
