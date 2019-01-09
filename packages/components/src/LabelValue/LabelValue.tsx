@@ -4,6 +4,7 @@ import styled from 'styled-components';
 type Props = {
   label: string;
   value: string | number;
+  valueTestId?: string;
 };
 
 const Wrapper = styled.div`
@@ -28,14 +29,14 @@ const ValueSection = styled.div`
 `;
 
 const LabelValue = (props: Props) => {
-  const { label, value } = props;
+  const { label, value, valueTestId } = props;
 
   return (
     <Wrapper>
       <LabelSection>
         { label }
       </LabelSection>
-      <ValueSection>
+      <ValueSection data-testid={valueTestId}>
         { value }
       </ValueSection>
     </Wrapper>
