@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { sum } from '@monorepo/core';
-import { Button } from '@monorepo/components';
+import { sum, multiply } from '@monorepo/core';
+import { Button, Paper, LabelValue } from '@monorepo/components';
 
 type Props = {};
 type State = {
@@ -14,7 +14,7 @@ class App extends React.Component<Props, State> {
     counters: [0, 0],
   };
 
-  incrementCounter = (counterIndex: number) => {
+  incrementCounter = (counterIndex: number, toAdd: number) => {
     this.setState(prevState => {
       const prevCounters = prevState.counters;
 
@@ -22,25 +22,59 @@ class App extends React.Component<Props, State> {
         counters: Object.assign(
           [],
           prevCounters,
-          { [counterIndex]: prevCounters[counterIndex] + 1 }
+          { [counterIndex]: prevCounters[counterIndex] + toAdd }
         ),
       };
     });
   };
 
   render() {
+    const { counters } = this.state;
+
     return (
-      <div>
-        <div>
-          <h3>Counter A:</h3>
-          <p>{this.state.counters[0]}</p>
-        </div>
-        <div>
-          <h3>Counter B:</h3>
-          <p>{this.state.counters[1]}</p>
-        </div>
-        <Button onClick={() => this.incrementCounter(0)} title={'Increment A'} />
-        <Button onClick={() => this.incrementCounter(1)} title={'Increment B'} />
+      <div style={{ display: 'flex' }}>
+        {counters.map((counterValue, idx) => (
+          <Paper style={
+            {
+              display: 'flex',
+              flexDirection: 'column',
+              margin: 16,
+            }
+          }>
+            <LabelValue
+              label={`Counter${idx}`}
+              value={counterValue}
+            />
+            <div style={{ display: 'flex', marginTop: 16 }}>
+              <Button
+                onClick={() => this.incrementCounter(idx, 1)}
+                style={{ marginRight: 8 }}
+              >
+                Increment
+              </Button>
+              <Button onClick={() => this.incrementCounter(idx, -1)}>
+                Decrement
+              </Button>
+            </div>
+          </Paper>
+        ))}
+        <Paper style={
+          {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            margin: 16,
+          }
+        }>
+          <LabelValue
+            label={'Sum'}
+            value={sum(counters[0], counters[1])}
+          />
+          <LabelValue
+            label={'Multiply'}
+            value={multiply(counters[0], counters[1])}
+          />
+        </Paper>
       </div>
     );
   }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 type Props = {
   label: string;
-  value: string;
+  value: string | number;
 };
 
 const Wrapper = styled.div`
