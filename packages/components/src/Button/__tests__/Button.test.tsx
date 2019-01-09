@@ -7,7 +7,9 @@ describe('<Button />', () => {
   it('calls onClick when clicked', () => {
     const onClick = jest.fn();
     const { getByText } = render(
-      <Button onClick={onClick} title={'ClickMe!'} />
+      <Button onClick={onClick}>
+        ClickMe!
+      </Button>
     );
 
     expect(onClick.mock.calls.length).toBe(0);

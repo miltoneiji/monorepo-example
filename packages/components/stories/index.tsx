@@ -1,9 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Button } from '../src';
+import { Button, Paper, LabelValue } from '../src';
 
 storiesOf('Components', module)
   .add('Button', () => (
-    <Button onClick={() => {}} title={'Click me!'} />
+    <Button onClick={() => {}}>
+      ClickMe!
+    </Button>
+  ))
+  .add('Paper', () => (
+    <Paper>Hello</Paper>
+  ))
+  .add('LabelValue', () => (
+    <LabelValue label={'Price'} value={'$ 9,00'} />
   ));

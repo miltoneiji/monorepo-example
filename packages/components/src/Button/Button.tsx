@@ -1,20 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
-type ButtonProps = {
-  onClick(e: React.MouseEvent<HTMLElement>): void;
-  title: string;
-}
+const Button = styled.button`
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #007BFF;
+  background-color: #007BFF;
+  color: #FFFFFF;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  font-size: 1rem;
 
-const Button = (props: ButtonProps) => {
-  const { onClick, title } = props;
-
-  return (
-    <button
-      onClick={onClick}
-    >
-      {title}
-    </button>
-  );
-};
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+`;
 
 export default Button;
