@@ -2,5 +2,17 @@
   "name": "monorepo",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.8.5"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "test": "lerna run test --stream",
+    "build": "lerna run build",
+    "start": "lerna run start"
+  }
 }
