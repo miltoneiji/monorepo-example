@@ -13,6 +13,7 @@
     "clean": "lerna clean",
     "test": "lerna run test --stream",
     "build": "lerna run build",
-    "start": "lerna run start"
+    "webapp:start": "lerna run --scope @monorepo/webapp start --stream",
+    "components:storybook": "lerna run --scope @monorepo/components storybook"
   }
 }
