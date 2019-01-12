@@ -8,6 +8,10 @@ Yet another monorepo example.
 - [x] react
 - [x] jest
 
+- [x] storybook
+- [ ] linter
+- [x] prettier
+
 ## How to use?
 
 ### Bootstrap all dependencies:
