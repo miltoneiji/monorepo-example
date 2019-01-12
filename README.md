@@ -9,7 +9,7 @@ Yet another monorepo example.
 - [x] jest
 
 - [x] storybook
-- [ ] linter
+- [x] linter
 - [x] prettier
 
 ## How to use?
