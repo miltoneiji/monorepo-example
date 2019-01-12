@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { sum, multiply } from '@monorepo/core';
-import { Button, Paper, LabelValue } from '@monorepo/components';
+import { Button, LabelValue, Paper } from '@monorepo/components';
+import { multiply, sum } from '@monorepo/core';
 
-type Props = {};
-type State = {
+interface IState {
   counters: number[];
-};
+}
 
-class App extends React.Component<Props, State> {
+class App extends React.Component<{}, IState> {
   state = {
     counters: [0, 0],
   };

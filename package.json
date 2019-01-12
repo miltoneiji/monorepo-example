@@ -24,6 +24,7 @@
     "clean": "lerna clean",
     "test": "lerna run test --stream",
     "build": "lerna run build",
+    "lint": "lerna run lint",
     "prettier": "lerna run prettier",
     "webapp:start": "lerna run --scope @monorepo/webapp start --stream",
     "components:storybook": "lerna run --scope @monorepo/components storybook"

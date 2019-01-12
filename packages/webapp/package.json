@@ -32,6 +32,7 @@
     "build": "webpack-cli",
     "start": "webpack-dev-server",
     "prettier": "prettier --write './src/**/*'",
+    "lint": "tslint --fix './src/**/*.ts?(x)'",
     "test": "jest"
   }
 }
