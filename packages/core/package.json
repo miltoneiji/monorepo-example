@@ -15,7 +15,7 @@
     "clean:build": "rm -rf ./lib",
     "build": "tsc",
     "test": "jest",
-    "prettier": "prettier --write './src/**/*'",
+    "prettier": "prettier --write './src/**/*.ts?(x)'",
     "lint": "tslint --fix './src/**/*.ts?(x)'"
   }
 }

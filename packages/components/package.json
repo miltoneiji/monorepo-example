@@ -29,6 +29,6 @@
     "test": "jest",
     "lint": "tslint --fix './src/**/*.ts?(x)'",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "prettier": "prettier --write './src/**/*'"
+    "prettier": "prettier --write './src/**/*.ts?(x)'"
   }
 }

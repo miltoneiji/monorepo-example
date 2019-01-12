@@ -26,6 +26,7 @@
     "build": "lerna run build",
     "lint": "lerna run lint",
     "prettier": "lerna run prettier",
+    "verify": "yarn clean -y && yarn clean:build && yarn bootstrap && yarn build && yarn lint && yarn prettier && yarn test",
     "webapp:start": "lerna run --scope @monorepo/webapp start --stream",
     "components:storybook": "lerna run --scope @monorepo/components storybook"
   }
