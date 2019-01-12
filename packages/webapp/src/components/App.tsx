@@ -14,15 +14,13 @@ class App extends React.Component<Props, State> {
   };
 
   incrementCounter = (counterIndex: number, toAdd: number) => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       const prevCounters = prevState.counters;
 
       return {
-        counters: Object.assign(
-          [],
-          prevCounters,
-          { [counterIndex]: prevCounters[counterIndex] + toAdd }
-        ),
+        counters: Object.assign([], prevCounters, {
+          [counterIndex]: prevCounters[counterIndex] + toAdd,
+        }),
       };
     });
   };
@@ -35,13 +33,11 @@ class App extends React.Component<Props, State> {
         {counters.map((counterValue, idx) => (
           <Paper
             key={idx}
-            style={
-              {
-                display: 'flex',
-                flexDirection: 'column',
-                margin: 16,
-              }
-            }
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              margin: 16,
+            }}
           >
             <LabelValue
               label={`Counter ${idx}`}
@@ -61,18 +57,15 @@ class App extends React.Component<Props, State> {
             </div>
           </Paper>
         ))}
-        <Paper style={
-          {
+        <Paper
+          style={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             margin: 16,
-          }
-        }>
-          <LabelValue
-            label={'Sum'}
-            value={sum(counters[0], counters[1])}
-          />
+          }}
+        >
+          <LabelValue label={'Sum'} value={sum(counters[0], counters[1])} />
           <LabelValue
             label={'Multiply'}
             value={multiply(counters[0], counters[1])}

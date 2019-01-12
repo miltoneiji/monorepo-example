@@ -17,6 +17,7 @@
     "@types/styled-components": "^4.1.5",
     "babel-loader": "^8.0.5",
     "jest": "^23.6.0",
+    "prettier": "^1.15.3",
     "react-testing-library": "^5.4.4",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"
@@ -25,6 +26,7 @@
     "clean:build": "rm -rf ./lib",
     "build": "tsc",
     "test": "jest",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "prettier": "prettier --write './src/**/*'"
   }
 }

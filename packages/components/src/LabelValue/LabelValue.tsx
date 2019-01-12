@@ -13,18 +13,18 @@ const Wrapper = styled.div`
 `;
 
 const LabelSection = styled.div`
-  border-top-left-radius: .25rem; 
-  border-bottom-left-radius: .25rem;
-  padding: .375rem .75rem;
-  background-color: #6F42C1;
-  color: #FFFFFF;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #6f42c1;
+  color: #ffffff;
 `;
 
 const ValueSection = styled.div`
-  border-top-right-radius: .25rem; 
-  border-bottom-right-radius: .25rem;
-  padding: .375rem .75rem;
-  background-color: #DADAD9;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #dadad9;
   color: #000000;
 `;
 
@@ -33,12 +33,8 @@ const LabelValue = (props: Props) => {
 
   return (
     <Wrapper>
-      <LabelSection>
-        { label }
-      </LabelSection>
-      <ValueSection data-testid={valueTestId}>
-        { value }
-      </ValueSection>
+      <LabelSection>{label}</LabelSection>
+      <ValueSection data-testid={valueTestId}>{value}</ValueSection>
     </Wrapper>
   );
 };
