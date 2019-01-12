@@ -1,4 +1,4 @@
-import { sum, multiply } from '../';
+import { multiply, sum } from '../';
 
 describe('sum', () => {
   it('works', () => {

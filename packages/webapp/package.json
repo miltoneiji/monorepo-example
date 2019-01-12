@@ -31,7 +31,8 @@
     "clean:build": "rm -fr ./dist",
     "build": "webpack-cli",
     "start": "webpack-dev-server",
-    "prettier": "prettier --write './src/**/*'",
+    "prettier": "prettier --write './src/**/*.ts?(x)'",
+    "lint": "tslint --fix './src/**/*.ts?(x)'",
     "test": "jest"
   }
 }

@@ -8,12 +8,14 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
     "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
     "typescript": "^3.2.2"
   },
   "scripts": {
     "clean:build": "rm -rf ./lib",
     "build": "tsc",
     "test": "jest",
-    "prettier": "prettier --write './src/**/*'"
+    "prettier": "prettier --write './src/**/*.ts?(x)'",
+    "lint": "tslint --fix './src/**/*.ts?(x)'"
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type Props = {
+interface IProps {
   label: string;
   value: string | number;
   valueTestId?: string;
-};
+}
 
 const Wrapper = styled.div`
   display: inline-flex;
@@ -28,7 +28,7 @@ const ValueSection = styled.div`
   color: #000000;
 `;
 
-const LabelValue = (props: Props) => {
+const LabelValue = (props: IProps) => {
   const { label, value, valueTestId } = props;
 
   return (
