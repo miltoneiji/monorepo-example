@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
+    "clean:build": "rm -fr ./dist",
     "build": "webpack-cli",
     "start": "webpack-dev-server",
     "test": "jest"
