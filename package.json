@@ -10,6 +10,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "clean:build": "lerna run clean:build",
     "clean": "lerna clean",
     "test": "lerna run test --stream",
     "build": "lerna run build",

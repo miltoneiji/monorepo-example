@@ -22,6 +22,7 @@
     "typescript": "^3.2.2"
   },
   "scripts": {
+    "clean:build": "rm -rf ./lib",
     "build": "tsc",
     "test": "jest",
     "storybook": "start-storybook -p 9001 -c .storybook"
